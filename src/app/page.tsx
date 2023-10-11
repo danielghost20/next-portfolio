@@ -1,113 +1,213 @@
-import Image from 'next/image'
+import Skill from "@/components/Skill";
+import { ModeToggle } from "@/components/ToggleTheme";
+import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  BiGhost,
+  BiLogoTailwindCss,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoTypescript,
+  BiGitBranch,
+  BiLogoGithub,
+  BiSolidRightArrow
+} from "react-icons/bi";
+import { SiNextdotjs, SiSequelize } from "react-icons/si";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <>
+      <header className="w-full min-h-screen header">
+        <nav className="flex w-full items-center h-16 justify-between px-2">
+          <ul className="flex gap-4 items-center">
+            <BiGhost className="text-gray-500 text-xl" />
+            <li>
+              <Link className="text-gray-500 text-base font-semibold" href="/proyects">
+                Proyectos
+              </Link>
+            </li>
+            <li>
+              <Link className="text-gray-500 text-base font-semibold" href="/contact">
+                Contacto
+              </Link>
+            </li>
+          </ul>
+          <ModeToggle />
+        </nav>
+        <div className="max-w-2xl w-full m-auto mt-20 flex flex-col items-center justify-center gap-5">
+          <a className="rounded-2xl font-semibold border-2 py-1 px-3 text-sm bg-muted text-white">
+            Sigueme en LinkedIn
           </a>
+          <h1 className="text-8xl text-center font-bold text-foreground">
+            GHOST
+          </h1>
+          <p className="text-center text-lg text-gray-500">
+            Lorem ipsum dolor amet consectetur quo nesciunt mollitia, dolorem
+            sit, amet consectetur quo nesciunt mollitia, dolorem incidunt
+            possimus optio velit?
+          </p>
+          <div className="flex justify-center gap-4">
+            <button className="max-w-max text-sm font-semibold py-2 px-5 bg-foreground text-background rounded-md">
+              Curriculum
+            </button>
+            <a className="font-medium text-sm  bg-transparent text-foreground border-2 py-2 rounded-md px-6">
+              GitHub
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </header>
+      <main className="w-full bg-background ">
+        <div className="w-full flex max-w-screen-xl m-auto gap-5 px-2 justify-around items-center mt-10">
+          <Image
+            className=" w-40 object-contain"
+            src="/images/academlo-dark.png"
+            width={400}
+            height={200}
+            alt="academlo_logo"
+          />
+          <Image
+            className=" w-40 object-contain"
+            src="/images/country-dark.png"
+            width={400}
+            height={200}
+            alt="no_country_logo"
+          />
+          <Image
+            className=" w-40 object-contain"
+            src="/images/nuclea-dark.png"
+            width={400}
+            height={200}
+            alt="nuclea_solutions_logo"
+          />
+          <Image
+            className=" w-40 object-contain"
+            src="/images/platzi-dark.png"
+            width={400}
+            height={200}
+            alt="platzi_logo"
+          />
+        </div>
+        <section className="max-w-screen-2xl mt-10 m-auto min-h-screen text-left px-3 flex flex-col items-center justify-center">
+          <h2 className="text-4xl font-medium mb-10">Sobre mi</h2>
+          <div className="w-full flex px-2 items-start justify-between mt-10">
+            <div className="max-w-md w-full">
+              <span className="text-gray-700 font-semibold text-lg">
+                Desarrollador web Full Stack
+              </span>
+            </div>
+            <div className="max-w-2xl w-full">
+              <h3 className="text-3xl font-semibold mb-6">Daniel Ramos</h3>
+              <p className="text-gray-600 text-lg font-medium">
+                Soy un desarrollador web autodidacta con experiencia en
+                proyectos reales y colaboraciones con otros profesionales del
+                desarrollo.
+              </p>
+              <p className="text-gray-600 text-lg font-medium mt-3">
+                Disfruto incorporando nuevas tecnologías en mis proyectos de
+                desarrollo web. Siempre estoy buscando oportunidades para
+                mantenerme al día con las últimas tendencias tecnológicas y
+                mejorar constantemente mis habilidades.
+              </p>
+              <div className="w-full flex gap-4 mt-5 flex-wrap">
+                <Skill
+                  icon={<SiNextdotjs className="text-lg" />}
+                  name="NextJS"
+                />
+                <Skill
+                  icon={<BiLogoTailwindCss className="text-lg" />}
+                  name="TailwindCSS"
+                />
+                <Skill
+                  icon={<BiLogoNodejs className="text-lg" />}
+                  name="NodeJS"
+                />
+                <Skill
+                  icon={<BiLogoPostgresql className="text-lg" />}
+                  name="PostgreSQL"
+                />
+                <Skill
+                  icon={<SiSequelize className="text-lg" />}
+                  name="Sequelize"
+                />
+                <Skill
+                  icon={<BiLogoTypescript className="text-lg" />}
+                  name="Typescript"
+                />
+                <Skill icon={<BiGitBranch className="text-lg" />} name="Git" />
+                <Skill
+                  icon={<BiLogoGithub className="text-lg" />}
+                  name="GitHub"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="mt-20 px-3 max-w-screen-2xl m-auto flex flex-col justify-center items-center">
+          <h2 className="text-left text-4xl font-semibold mb-10">Experiencia</h2>
+          <Tabs defaultValue="country" className="max-w-4xl m-auto flex p-4">
+            <TabsList className="flex flex-col h-full items-start rounded-none border-r-2 bg-transparent">
+              <TabsTrigger className="text-lg text-left" value="country">No country</TabsTrigger>
+              <TabsTrigger className="text-lg text-left" value="nuclea">Nuclea Solutions</TabsTrigger>
+            </TabsList>
+            <div className="ml-2">
+              <TabsContent value="country">
+                <h2 className="text-2xl my-2 font-semibold">Desarrollador Frontend @NextJS</h2>
+                <div className="mb-4">
+                  <h3 className="text-2xl my-2 font-semibold">Tecnologías</h3>
+                  <div className="flex gap-4 text-gray-600">
+                    <span>Oct 2022 - Feb 2023</span>
+                    <span>Ago 2023 - En Laburo</span>
+                  </div>
+                  <Separator className="my-4" />
+                  <div className="flex gap-4">
+                    <span>NextJS</span>
+                    <Separator orientation="vertical" />
+                    <span>TailwindCSS</span>
+                    <Separator orientation="vertical" />
+                    <span>SWR</span>
+                  </div>
+                </div>
+                <p className="flex gap-3 items-start text-gray-400"><BiSolidRightArrow className="text-xl text-blue-800" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam iste eos impedit dolorem accusamus, dignissimos labore, aperiam quis numquam quaerat. tempore assumenda, ab ad. Eos, mollitia.</p>
+                <p className="flex gap-3 items-start text-gray-400 mt-3"><BiSolidRightArrow className="text-xl text-blue-800" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam iste eos impedit dolorem accusamus, dignissimos labore, aperiam quis numquam quaerat. Quis molestias aliquam tempore assumenda, ab ad. Eos, mollitia.</p>
+                <p className="flex gap-3 items-start text-gray-400 mt-3"><BiSolidRightArrow className="text-xl text-blue-800" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam iste eos impedit dolorem accusamus molestias aliquam tempore assumenda, ab ad. Eos, mollitia.</p>
+              </TabsContent>
+              <TabsContent value="nuclea">
+                <h2 className="text-2xl my-2 font-semibold">Desarrollador Frontend @FlutterFlow</h2>
+                <div className="mb-4">
+                  <h3 className="text-2xl my-2 font-semibold">Tecnologías</h3>
+                  <div className="flex gap-4 text-gray-600">
+                    <span>Abr 2023 - Jul 2023</span>
+                  </div>
+                  <Separator className="my-4" />
+                  <div className="flex gap-4">
+                    <span>NextJS</span>
+                    <Separator orientation="vertical" />
+                    <span>TailwindCSS</span>
+                    <Separator orientation="vertical" />
+                    <span>SWR</span>
+                  </div>
+                </div>
+                <p className="flex gap-3 items-start text-gray-400"><BiSolidRightArrow className="text-xl text-blue-800" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam iste eos impedit dolorem accusamus, dignissimos labore, aperiam quis numquam quaerat. tempore assumenda, ab ad. Eos, mollitia.</p>
+                <p className="flex gap-3 items-start text-gray-400 mt-3"><BiSolidRightArrow className="text-xl text-blue-800" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quam iste eos impedit dolorem accusamus, dignissimos labore, aperiam quis numquam quaerat. Quis molestias aliquam tempore assumenda, ab ad. Eos, mollitia.</p>
+              </TabsContent>
+            </div>
+          </Tabs>
+        </section>
+        <section className="max-w-screen-xl m-auto mt-20 flex flex-col items-center justify-center min-h-screen px-3">
+          <h2 className="mt-10 text-center text-4xl font-semibold">Proyectos</h2>
+          <Image className="w-full mt-5 rounded-md border-2" src='/images/galery.webp' width={1200} height={1200} alt="galery_project" />
+          <div className="w-full mt-4 flex justify-between">
+            <h3 className="text-3xl font-semibold">Galery</h3>
+            <p className="max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi a atque distinctio. Possimus, saepe iusto quaerat laborum assumenda provident laboriosam quam nesciunt accusamus! Pariatur consequatur numquam labore, dolor natus in?</p>
+          </div>
+          <Link className={`${buttonVariants()} m-auto mt-5`} href='/proyects'>
+            Ver mas proyectos
+          </Link>
+        </section>
+      </main>
+    </>
+  );
 }
