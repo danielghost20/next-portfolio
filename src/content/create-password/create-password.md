@@ -1,6 +1,6 @@
 ---
-fileName: ghost
-title: ghost-ui
+fileName: password
+title: '@create-password'
 subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
 ---
 

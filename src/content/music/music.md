@@ -1,6 +1,6 @@
 ---
-fileName: store
-title: Next-shop
+fileName: music
+title: next-music
 subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
 ---
 

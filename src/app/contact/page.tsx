@@ -2,7 +2,6 @@ import { FiGithub } from 'react-icons/fi'
 import { MdOutlineMail } from 'react-icons/md'
 import { FaLinkedinIn } from 'react-icons/fa'
 import Link from 'next/link'
-import { ModeToggle } from '@/components/ToggleTheme'
 import { BiGhost } from 'react-icons/bi'
 
 
@@ -10,22 +9,34 @@ export default function Contact() {
     return (
         <>
             <header className="w-full">
-                <nav className="flex w-full items-center h-16 justify-between px-2">
-                    <ul className="flex gap-4 items-center">
-                        <BiGhost className="text-gray-500 text-xl" />
-                        <li>
-                            <Link className="text-gray-500 text-base font-semibold" href="/proyects">
-                                Proyectos
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-gray-500 text-base font-semibold" href="/contact">
-                                Contacto
-                            </Link>
-                        </li>
-                    </ul>
-                    <ModeToggle />
-                </nav>
+            <nav className="flex w-full max-w-7xl m-auto border-b-2 items-center  py-5 justify-between px-2">
+          <Link href='/' className="rounded-full p-4 border-2 bg-gray-900">
+            <BiGhost className="text-gray-300 text-xl" />
+          </Link>
+          <ul className="flex gap-4 items-center">
+            <li>
+              <Link className="text-gray-500 text-base font-semibold" href="/proyects">
+                Proyectos 
+              </Link>
+            </li>
+            <span className="text-gray-500">
+              /
+            </span>
+            <li>
+              <Link className="text-gray-500 text-base font-semibold" href="/about">
+                Sobre mi
+              </Link>
+            </li>
+            <span className="text-gray-500">
+              /
+            </span>
+            <li>
+              <Link className="text-gray-500 text-base font-semibold" href="/contact">
+                Contacto
+              </Link>
+            </li>
+          </ul>
+        </nav>
             </header>
             <main className="w-full p-4 items-center h-screen flex justify-evenly px-2 gap-4">
                 <Link className='max-w-sm w-full' href=''>

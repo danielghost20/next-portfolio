@@ -13,9 +13,10 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-      },
+      }
     },
     extend: {
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -70,6 +71,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        body: ["var(--font-nunito)"],
+        display: ["var(--font-nunito-sans)"],
+        inter: ["var(--font-inter)"]
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],

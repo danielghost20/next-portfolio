@@ -2,9 +2,9 @@ import Link from "next/link";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsArrowRight } from 'react-icons/bs'
 
-export default function Card({ name, description, fileName }: { name: string, description: string, fileName: string }) {
+export default function Card({ name, description, fileName}: { name: string, description: string, fileName: string }) {
     return (
-        <div className="rounded-md p-5 border-2 max-w-sm w-full h-auto hover:cursor-pointer">
+        <div  className="rounded-md break-inside-avoid p-5 mb-3 border-2 w-full  hover:cursor-pointer">
             <div className="w-full flex items-center justify-between">
                 <span className="text-sm">Jan 21, 2023</span>
                 <div className="flex items-center">
