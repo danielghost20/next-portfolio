@@ -1,21 +1,21 @@
 ---
-fileName: music
-title: next-music
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+fileName: galery
+title: Next-Galery
+subtitle: Galery es un sitio que permite almacenar imagenes tus imagenes que necesites para liberar espacio de tu celular, computadora o tableta, accede a ellas con un solo click
 ---
 
-# Tienda Online
+# Galery App
 ![galery-image](/images/galery/galery.webp)
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium, deleniti ullam adipisci reiciendis suscipit nihil. Corporis dolores ut suscipit, atque omnis odio!
 
 ## Herramientas de desarrollo
-* Frontend
-    * NextJS
-    * Typescript
-    * Axios
-    * TailwindCSS
-    * chadcn
+ Frontend
+     NextJS
+     Typescript
+     Axios
+     TailwindCSS
+     chadcn
 
 * Backend
 	* Firebase

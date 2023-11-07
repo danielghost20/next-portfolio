@@ -1,10 +1,10 @@
 ---
-fileName: galery
-title: Next-Galery
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+fileName: password
+title: '@create-password'
+subtitle: Create password es un paquete el cual permite crear contraseñas seguras
 ---
 
-# Galery App
+# Tienda Online
 ![galery-image](/images/galery/galery.webp)
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium, deleniti ullam adipisci reiciendis suscipit nihil. Corporis dolores ut suscipit, atque omnis odio!

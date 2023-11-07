@@ -1,7 +1,7 @@
 ---
-fileName: password
-title: '@create-password'
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+fileName: ghost
+title: ghost-ui
+subtitle: Ghos UI es un sitio el cual contiene recursos de programacion como componentes hechos con tailwindcss, (una libreria de estilos) listos para usar y manipular dependiendo de tus necesidades
 ---
 
 # Tienda Online

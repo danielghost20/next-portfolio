@@ -1,7 +1,7 @@
 ---
-fileName: store
-title: Next-shop
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+fileName: portfolio
+title: next-portfolio
+subtitle: Este portafilio se puede usar como plantilla para crear el tuyo modificandolo a tus necesidades
 ---
 
 # Tienda Online

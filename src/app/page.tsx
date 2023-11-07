@@ -1,62 +1,29 @@
-import { buttonVariants } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  BiGhost,
-  BiLogoTailwindCss,
-  BiLogoNodejs,
-  BiLogoPostgresql,
-  BiLogoTypescript,
-  BiGitBranch,
-  BiLogoGithub,
-  BiSolidRightArrow,
-} from "react-icons/bi";
-import {BsArrowUpRight} from 'react-icons/bs'
+import { BsArrowRight } from "react-icons/bs";
+import { FiGithub } from 'react-icons/fi'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 export default function Home() {
   return (
     <>
-      <header className="w-full min-h-screen flex items-center justify-center relative ">
-        <nav className="flex w-full max-w-7xl m-auto border-b-2 items-center absolute top-0 py-5 justify-between px-2">
-          <Link href='/' className="rounded-full p-4 border-2 bg-gray-900">
-            <BiGhost className="text-gray-300 text-xl" />
-          </Link>
-          <ul className="flex gap-4 items-center">
-            <li>
-              <Link className="text-gray-500 text-base font-semibold" href="/proyects">
-                Proyectos 
-              </Link>
-            </li>
-            <span className="text-gray-500">
-              /
-            </span>
-            <li>
-              <Link className="text-gray-500 text-base font-semibold" href="/about">
-                Sobre mi
-              </Link>
-            </li>
-            <span className="text-gray-500">
-              /
-            </span>
-            <li>
-              <Link className="text-gray-500 text-base font-semibold" href="/contact">
-                Contacto
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="max-w-screen-2xl w-full m-auto  flex flex-col justify-center ">
-          <a className="rounded-2xl font-semibold max-w-max m-auto border-2 py-1 px-3 text-sm">
-            Daniel Ramos
-          </a>
-          <h1 className="text-[17vw] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-700 font-inter  text-center leading-none font-bold ">
-            GHOST
-          </h1>
-          <button className="py-4 px-10 mt-5 flex items-center gap-2 text-xl font-inter border-2 border-gray-900 text-gray-400 bg-[#1A1A1A] rounded-sm m-auto max-w-max">
-            Visitar Github <BsArrowUpRight/>
-          </button>
-        </div>
+      <header className="w-full absolute top-0">
+        <Navbar links={[{link: 'proyects', name: 'proyectos'}, {link: 'about', name: 'sobre mi'}, {link: 'contact', name: 'contacto'}]} />
       </header>
+      <main className="w-full min-h-screen max-w-3xl flex-col gap-9 p-3 flex justify-center items-center m-auto">
+        <div className="w-32 h-32 rounded-full overflow-hidden p-1 bg-tx-primary flex justify-center items-center">
+        <Image className="w-full h-full object-cover rounded-full" src='/images/galery.jpg' width={100} height={100} alt="profile_image" />
+        </div>
+        <h1 className="text-white text-center text-2xl">
+          Hola, <span className="font-medium">soy Daniel Ramos.</span> Un desarrollador web y apasionado por la tecnología. Disfruto de crear sitios web con NextJS
+        </h1>
+        <div className="flex gap-4">
+          <a className="py-2 px-4 cursor-pointer text-white border-2 border-[#23232e] rounded-xl max-w-max">Descargar CV</a>
+          <a href="mailto:daniel21develop@gmail.com" className="py-2 px-4 cursor-pointer bg-tx-primary border-2 border-[#1c1c25] rounded-xl max-w-max flex items-center gap-2">Contactame aqui <BsArrowRight /></a>
+          <a href="https://www.linkedin.com/in/daniel-ramos21/" target="blank" className="rounded-md flex items-center cursor-pointer border-[#23232e] border-2 text-white p-2"><FaLinkedinIn className="text-white text-xl"/></a>
+          <a href="https://github.com/danielghost20" target="blank" className="rounded-md flex items-center cursor-pointer border-[#23232e] border-2 text-white p-2"><FiGithub className="text-white text-xl"/></a>
+        </div>
+      </main>
     </>
   );
 }

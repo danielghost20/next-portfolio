@@ -1,7 +1,7 @@
 ---
-fileName: ghost
-title: ghost-ui
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+fileName: music
+title: next-music
+subtitle: next-music es un sitio el cual te permite escuchar tus canciones preferidas en un solo click, toda la informacion proviene de spotify
 ---
 
 # Tienda Online

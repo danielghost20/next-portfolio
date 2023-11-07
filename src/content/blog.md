@@ -1,7 +1,7 @@
 ---
 fileName: blog
 title: next-blog
-subtitle: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aut consequatur voluptates illo assumenda laboriosam explicabo accusantium
+subtitle: next-blog es un blog el cual puedes publicar informacion sobre cualquier tema, informacion sobre alguna tecnología y mas.
 ---
 
 # Tienda Online
